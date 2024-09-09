@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+:root {
+  --space: #222e50;
+  --cerulean: #007991;
+  --zomp: #439a86;
+  --celadon: #bcd8c1;
+  --flax: #e9d985;
+}
+
+body {
+  background-color: var(--space);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 14em 1fr;
+  min-height: 100vh;
+  padding-bottom: 2.5rem;
+}
+
+.container>div {
+  padding: 0.5em;
+}
+
+.sidebar {
+  background-color: var(--zomp);
+  color: var(--flax);
+}
+
+/*
+#chatbox {
+  overflow: scroll;
+}
+*/
+
+.recipe {
+  padding: 0.5em;
+  margin: 0.5em;
+  background-color: var(--celadon);
+  color: var(--space);
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.25em;
+  background-color: var(--flax);
+}
