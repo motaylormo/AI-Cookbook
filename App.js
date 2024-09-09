@@ -5,7 +5,7 @@ import { marked } from 'marked';
 import { Form, Input, Select, Checkbox, Radio, Col, Row, Button, Space, ConfigProvider } from 'antd';
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: /** fill in key **/,
   dangerouslyAllowBrowser: true
 });
 
@@ -51,10 +51,9 @@ const allergyOptions = [
 async function openaiStuff(dict, setLoading) {
   const completion = await openai.chat.completions.create({
     messages: [
-      //{ "role": "system", "content": "You are a helpful assistant." },
       { "role": "user", "content": assemblePromptStr(dict) }
     ],
-    model: "gpt-3.5-turbo", //"gpt-4-0125-preview"
+    model: "gpt-3.5-turbo",
   });
   displayRecipe(completion.choices[0]['message']['content']);
   setLoading(false)
